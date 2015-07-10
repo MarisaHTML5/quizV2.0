@@ -16,6 +16,14 @@ router.get('/quizes/answer', quizController.answer);
 
 //GET Autor
 
+//probando solo con routes: NO FUNCIONA
+/*router.get('/autor', function(req, res) {
+  res.render('author', { title: 'Quiz' });
+});*/
+
+
+//usando quiz controller
+
 router.get('/autor/author', quizController.author); //lo añado para que cargue la página de autor
 
 module.exports = router;
