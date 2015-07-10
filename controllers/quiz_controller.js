@@ -5,7 +5,7 @@ exports.question=function(req, res){
 
 };
 
-function removeAccents(word){
+/*function removeAccents(word){
     word = word.replace(/[ÀÁÂÄ]/g,"A");
     word = word.replace(/[àáâä]/g,"a");
     word = word.replace(/[ÈÉÊË]/g,"E");
@@ -18,20 +18,35 @@ function removeAccents(word){
     word = word.replace(/[ùúûü]/g,"u");
     return word;
 }
-
+*/
 
 
 //GET/quizes/answer
 exports.answer = function (req, res){
 	if(req.query.respuesta==='Roma'){
-		if(removeAccents(req.query.respuesta).toUpperCase() === removeAccents('Roma').toUpperCase()){
-		res.render('quizes/answer', {respuesta:'Correcto'})};  //corrección paréntesis
+		
+		res.render('quizes/answer', {respuesta:'Correcto'});  //corrección paréntesis
 	} else{
 		res.render('quizes/answer', {respuesta:'Incorrecto'});
 	}
 };
 
+//quitando acentos
+/*exports.answer = function (req, res){
+    if(req.query.respuesta==='Roma'){
+        if(removeAccents(req.query.respuesta).toUpperCase() === removeAccents('Roma').toUpperCase()){
+        res.render('quizes/answer', {respuesta:'Correcto'})};  //corrección paréntesis
+    } else{
+        res.render('quizes/answer', {respuesta:'Incorrecto'});
+    }
+};
+*/
 
+//GET/autor/author
+exports.author=function(req, res){
+    res.render('autor/author', {autoria: 'marisa'});
+
+};
 
 
 
