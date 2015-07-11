@@ -28,6 +28,12 @@ exports.author=function(req, res){
 
 };
 
+//GET/construction
+exports.construccion=function(req, res){
+    res.render('autor/construccion', {contruccion: 'obras'});
+
+};
+
 
 
 

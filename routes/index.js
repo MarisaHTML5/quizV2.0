@@ -26,6 +26,8 @@ router.get('/quizes/answer', quizController.answer);
 
 router.get('/autor/author', quizController.author); //lo añado para que cargue la página de autor
 
+router.get('/autor/construccion', quizController.construccion); //lo añado para que cargue la página en construccion
+
 
 
 module.exports = router;
