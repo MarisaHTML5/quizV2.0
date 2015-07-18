@@ -20,7 +20,7 @@ exports.Quiz = Quiz; //exporta la definición de la tabla quiz
 sequelize.sync().success(function(){   // Este método será el que cree quiz.sqlite de forma automática al hacer npm start
 	//success ejecuta el manejador de la tabla una vez creada
 	Quiz.count().success(function(count){
-		if (count===0){ //la tabla solo se inicia si está vacía
+		if (count === 0){ //la tabla solo se inicia si está vacía
 			Quiz.create({
 				pregunta: 'Capital de Italia',
 				respuesta: 'Roma'
