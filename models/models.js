@@ -69,6 +69,10 @@ sequelize.sync().then(function(){   // Este método será el que cree quiz.sqlit
 			Quiz.create({
 				pregunta: 'Capital de Italia',
 				respuesta: 'Roma'
+			});
+			Quiz.create({
+				pregunta: 'Capital de Portugal',
+				respuesta: 'Lisboa'
 			})
 			.then (function() {
 				console.log ('Base de datos inicializada')

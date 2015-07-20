@@ -28,6 +28,12 @@ router.get('/autor/author', quizController.author); //lo añado para que cargue 
 
 router.get('/autor/construccion', quizController.construccion); //lo añado para que cargue la página en construccion
 
+//rutas quizes definición. Fase DB
+router.get ('/quizes', quizController.index);
+router.get ('/quizes/:quizId(\\d+)', quizController.show);
+router.get ('/quizes/:quizId(\\d+)/answer', quizController.answer);
+
+
 
 
 module.exports = router;
