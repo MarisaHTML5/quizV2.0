@@ -9,10 +9,10 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Quiz' });
 });
 
-//GET Preguntas
+//GET Preguntas: Esto ya no sirve con DB
 
-router.get('/quizes/question', quizController.question);
-router.get('/quizes/answer', quizController.answer);
+/*router.get('/quizes/question', quizController.question);
+router.get('/quizes/answer', quizController.answer);*/
 
 //GET Autor
 
@@ -20,6 +20,11 @@ router.get('/quizes/answer', quizController.answer);
 /*router.get('/autor', function(req, res) {
   res.render('author', { title: 'Quiz' });
 });*/
+
+
+//Autoload de comandos con :quizID
+
+router.param('quizId', quizController.load);
 
 
 //usando quiz controller
