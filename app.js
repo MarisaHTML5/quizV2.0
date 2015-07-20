@@ -59,5 +59,6 @@ app.use(function(err, req, res, next) {
   });
 });
 
+app.set('port', (process.env.PORT || 5000)); //añadido según instrucciones web
 
 module.exports = app;
