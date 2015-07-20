@@ -70,7 +70,7 @@ sequelize.sync().then(function(){   // Este método será el que cree quiz.sqlit
 				pregunta: 'Capital de Italia',
 				respuesta: 'Roma'
 			})
-			.success (function() {
+			.then (function() {
 				console.log ('Base de datos inicializada')
 			});
 		};
