@@ -64,7 +64,7 @@ exports.Quiz = Quiz; //exporta la definición de la tabla quiz
 
 sequelize.sync().then(function(){   // Este método será el que cree quiz.sqlite de forma automática al hacer npm start
 	//success ejecuta el manejador de la tabla una vez creada. AQUÍ CAMBIA SUCCESS POR THEN, NO EXPLICA POR QUÉ PERO PARECE SER QUE ES PARA QUE FUNCIONE CON POSTGRESS
-	Quiz.count().success(function(count){
+	Quiz.count().then(function(count){     //aquí tab cambio success por then
 		if (count === 0){ //la tabla solo se inicia si está vacía
 			Quiz.create({
 				pregunta: 'Capital de Italia',
