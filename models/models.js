@@ -68,7 +68,7 @@ sequelize.sync().then(function(){   // Este método será el que cree quiz.sqlit
 	Quiz.count().then(function(count){     //aquí tab cambio success por then
 		if (count === 0){ //la tabla solo se inicia si está vacía
 			Quiz.create({
-				pregunta: 'Capital de tak',
+				pregunta: 'Capital de Italia',
 				respuesta: 'Roma'
 			});
 			Quiz.create({
