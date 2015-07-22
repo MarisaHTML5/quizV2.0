@@ -4,7 +4,8 @@ var path = require ('path');
 //Sqlite DATABASE_URL = sqlite://:@:/
 
 var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
-var DB_ name = (url[6]|| null);
+var DB_name = (url[6]|| null);
+
 var user = (url[2] || null);
 var pwd = (url[3] || null);
 var protocol = (url[1] || null);

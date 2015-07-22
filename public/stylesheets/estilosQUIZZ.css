@@ -195,6 +195,16 @@ a{
 img{
 	margin-top:50px;
 }
+
+table{
+	width: 40%;
+	margin: 0 auto;
+	margin-top: 50px;
+}
+table a:hover{
+	color: rgba(0,102,102,1);
+
+}
 @media screen and (max-width:600px){
 	.containerAutor{
 	width:100%;
