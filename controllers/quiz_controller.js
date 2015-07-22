@@ -14,15 +14,17 @@ exports.load =function (req, res, next, quizId){
 		).catch(function(error){next(error);});
 };
 
-//Get Quizes
+//Get Quizes....PRUEBA: LO QUITO A VER SI FUNCIONA....22.07.2015 19.00
 
-exports.index = function (req, res) {
+/*exports.index = function (req, res) {
 	models.Quiz.findAll().then (function(quizes){
 		res.render('quizes/index', {quizes : quizes}); // he sustituido index.ejs por index
 
 	}
 	).catch(function(error) {next(error);}) //lo añado con el autoload
-};
+};*/
+
+//hasta aki es lo que quito
 
 
 // GET/quizes/:id
@@ -64,9 +66,9 @@ exports.answer = function (req, res){
 		{quiz: req.quiz, respuesta: resultado});
 };
 
-//GET/quizes/answer
+//GET/quizes/answer: PRUEBO A QUITARLO A VER SI FUNCIONA...22.07.2015 19...
 
-exports.answer = function (req, res){
+/*exports.answer = function (req, res){
 	models.Quiz.findAll().then(function(quiz){   //cambios success por then
 	if(req.query.respuesta === quiz[0].respuesta){
 		
@@ -75,8 +77,8 @@ exports.answer = function (req, res){
 		res.render('quizes/answer', {respuesta:'Incorrecto'});
 	}
 })
-};
-
+};*/
+ //hasta aki
 
 
 //GET/autor/author
@@ -96,17 +98,17 @@ exports.construccion=function(req, res){
 
 
 
-//GET/quizes/question
-exports.question=function(req, res){
+//GET/quizes/question: LO QUITO A VER SI FUNCIONA. PRUEBA COMPARATIVA. 22.07.2015 19.00
+/*exports.question=function(req, res){
 	models.Quiz.findAll().then(function(quiz){   //cambios success por then
 		res.render('quizes/question', {pregunta:quiz[0].pregunta})
 	})
 	
 
 };
+*/
 
-
-
+//HASTA AKI
 
 
 
