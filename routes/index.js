@@ -38,7 +38,7 @@ router.get ('/quizes', quizController.index);
 router.get ('/quizes/:quizId(\\d+)', quizController.show);
 router.get ('/quizes/:quizId(\\d+)/answer', quizController.answer);
 //añadir para creación de preguntas por parte del usuario
-router.get('/quizes/new', quizzController.new);
+router.get('/quizes/new', quizController.new);
 router.post('/quizes/create', quizController.create);
 
 
