@@ -60,3 +60,18 @@ exports.construccion=function(req, res){
 };
 
 
+//GET /QUIZES/ NEW
+exports.new = function (req, res){
+  var quiz = models.Quiz.build( //crea objeto quizz
+    {pregunta: "Pregunta", respuesta:"Respuesta"});
+  res.render('quizes/new', {quiz: quiz});
+};
+
+//POST QUIZES/CREATE
+exports.create = function (req, res){
+  var quiz= models.Quiz.build(req.body.quiz);
+  //guarda en DB los campos pregun y reso de quiz
+  quiz.save({fields:["pregunta", "respuesta"]}).then(function(){
+    res.redirect('/quizes')
+  }) //Redirecciona a la lista de preguntas
+};
