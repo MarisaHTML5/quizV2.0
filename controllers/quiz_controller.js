@@ -13,15 +13,27 @@ exports.load = function(req, res, next, quizId) {
 };
 
 // GET /quizes
+//modificación para crear texto a buscar (añadirmos el condicional, en else dejamos la función primitiva)
+
 exports.index = function(req, res) {
+  if(req.query.search !== undefined) {
+    var search = ('%' + req.query.search + '%').replace(/\s/g, '%');
+    models.Quiz.findAll({where: ["lower(pregunta) like ?",search.toLowerCase()], order: 'pregunta ASC'}).then(
+      function(quizes) {
+        res.render('quizes/index', { quizes: quizes});
+      }
+    ).catch(function(error) {next(error);})
+  }
+  else {
     models.Quiz.findAll().then(
     function(quizes) {
       res.render('quizes/index', { quizes: quizes});
     }
   ).catch(function(error) { next(error);})
+  }
 };
 
-// GET /quizes/:id
+// GET /quizes/:id (question)
 exports.show = function(req, res) {
   res.render('quizes/show', { quiz: req.quiz});
 };
