@@ -114,6 +114,9 @@ section{
 	color: #333;
 	font-size:25px;
 	text-align:center;
+	height: 47%;
+	position:relative;
+	overflow: Auto;
 }
 
 .negrita{
@@ -282,6 +285,10 @@ a{
 	outline:none;
 	color: rgba(51,51,51,1);
 
+}
+
+#ErrorMsgs{
+	color: red;
 }
 /*#LinkBotton{
 	width:100px;

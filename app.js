@@ -30,6 +30,7 @@ app.use('/', routes);
 //app.use('/users', users); ESTO TAMBIËN LO ELIMINAMOS
 
 // catch 404 and forward to error handler
+
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
@@ -45,7 +46,7 @@ if (app.get('env') === 'development') {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
-      error: err
+      error: err, errors:[]    //modificaciones tema errores
     });
   });
 }
@@ -56,7 +57,8 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
-    error: {}
+    error: {},
+    errors:[]  //modificaciones tema errores
   });
 });
 

@@ -29,7 +29,19 @@
     </div>
   </nav>
   <section>
-    <%-body%>
+
+ <!--  parece q esto falla -->
+  <% if (errors.length) { %>
+  <span id='ErrorMsgs'>
+  Corregir errores: <br>
+  <% for (var i in errors) { %>
+  <span> <%= errors[i].message %> </span><br>
+  <% } %>
+  </span>
+  <% } %>
+   <!-- hasta aquí --> 
+   <div> <%-body%> </div>
+  
   </section>
   <footer>
     <p><a href="https://es.wikipedia.org/wiki/Quiz" target="new">¿Qué es un Quiz?</a></p>
