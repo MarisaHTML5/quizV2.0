@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var partials=require('express-partials');// INSTALO partials
+var methodOverride = require('method-override'); //instalo method override
 var routes = require('./routes/index');
 //var users = require('./routes/users'); ESTO LO ELIMINAMOS
 
@@ -25,7 +26,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded()); //sustituyo en anterior por este
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
+app.use(methodOverride('_method')); //lo pongo para la edición
 app.use('/', routes);
 //app.use('/users', users); ESTO TAMBIËN LO ELIMINAMOS
 
