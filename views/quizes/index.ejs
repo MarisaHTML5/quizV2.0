@@ -1,8 +1,11 @@
 
-    <table>
+        <table>
     <% var i; for (i=0; i < quizes.length; i++){ %>
     <tr>
     <td id="columpreguntas"><a href="quizes/<%= quizes[i].id %>"> <%= quizes[i].pregunta %></a></td>
+    
+
+    <td id="tema"> <%= quizes[i].tema %></td>  
     
     <td><a href="quizes/<%= quizes[i].id %>/edit"> <input value="Editar" class="Beditar"></a></td>
     <td>

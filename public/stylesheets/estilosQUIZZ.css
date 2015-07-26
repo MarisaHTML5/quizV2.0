@@ -316,6 +316,8 @@ a{
 
 }
 
+
+
 #ErrorMsgs{
 	color: red;
 }
@@ -350,7 +352,14 @@ table a:hover{
 
 #columpreguntas{
 	
-	width: 70%;
+	width: 40%;
+}
+
+#tema{
+	width: 20%;
+	font-size: 20px;
+	font-style: italic;
+	
 }
 @media screen and (max-width:600px){
 	.containerAutor{

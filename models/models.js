@@ -69,17 +69,20 @@ sequelize.sync().then(function(){   // Este método será el que cree quiz.sqlit
 		if (count === 0){ //la tabla solo se inicia si está vacía
 			Quiz.create({
 				pregunta: 'Capital de Italia',
-				respuesta: 'Roma'
+				respuesta: 'Roma',
+				tema: 'Humanidades'  //añado tema
 			});
 			Quiz.create({
 				pregunta: 'Capital de Portugal',
-				respuesta: 'Lisboa'
+				respuesta: 'Lisboa',
+				tema: 'Humanidades'  //añado tema
 			});
 
 			//añado otra pregunta, pero no se ve
 			Quiz.create({
 				pregunta: 'Capital de Francia',
-				respuesta: 'París'
+				respuesta: 'París',
+				tema: 'Humanidades'  //añado tema
 			})
 
 			.then (function() {
