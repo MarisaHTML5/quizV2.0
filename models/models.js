@@ -59,7 +59,17 @@ sequelize.sync().success(function(){   // Este método será el que cree quiz.sq
 var quiz_path = path.join(__dirname, 'quiz'); // parece que lo que añade es una variable más que asigna el path, pero es lo mismo que antes
 var Quiz = sequelize.import (quiz_path);
 
+// Importar definicion de la tabla Comment
+var comment_path = path.join(__dirname,'comment');
+var Comment = sequelize.import(comment_path);
+
+Comment.belongsTo(Quiz);
+Quiz.hasMany(Comment);
+
+//Exporta tablas
+
 exports.Quiz = Quiz; //exporta la definición de la tabla quiz
+exports.Comment = Comment; 
 
 // crear e inicializar la tabla de preguntas en DB
 
