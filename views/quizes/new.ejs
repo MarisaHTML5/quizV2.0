@@ -1,8 +1,7 @@
 <p class="negrita">Añadir pregunta:</p>
 
-<form method="post" action="/quizes/<%=quizid%>/comments/">
-	<input type="text" id="comment" name="comment[texto]" value="" /><br>
-	<button type="submit">Enviar</button>
+<form method="post" action="/quizes/create">
+<% include _form.ejs %>
 
 </form>
 
